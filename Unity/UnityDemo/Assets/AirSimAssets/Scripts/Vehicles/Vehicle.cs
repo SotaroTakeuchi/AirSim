@@ -359,6 +359,15 @@ namespace AirSimUnity {
             }
         }
 
+// Added for DroneControllerInput Use
+    public bool ControllerAllowed() {
+        return isServerStarted && !isApiEnabled;
+    }
+    
+    public void SetRCData(AirSimRCData data) { 
+        rcData = data;
+    }
+
         private void UpdateSegmentationView() {
             GameObject viewCameras = GameObject.FindGameObjectWithTag("ViewCameras");
             if (viewCameras) {
